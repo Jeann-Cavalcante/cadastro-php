@@ -7,3 +7,4 @@ $db_pass = 'bb5ecdb3';
 
 $pdo = new PDO("mysql:dbname=$db_name;host=$db_host", $db_user, $db_pass);
 
+?>
