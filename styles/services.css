@@ -1,0 +1,82 @@
+.services {
+  padding: 2rem 0;
+  background-color: var(--gray);
+}
+
+.services > h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--blue-color-primary);
+}
+
+.container__services {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service__item {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+ion-icon {
+  font-size: 2.5rem;
+  color: var(--dark-color-primary);
+}
+
+.service__item .service__item-content p {
+  font-size: 0.8rem;
+  color: var(--dark-color-secondary);
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.service__btn {
+  background-color: var(--dark-blue-color-primary);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 5rem;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem 0;
+  transition: all 0.9s;
+}
+
+.service__btn:hover {
+  background-color: var(--dark-color-primary);
+}
+
+@media (max-width: 915px) {
+  .service__item {
+    width: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container__services {
+    width: 100%;
+    flex-direction: column;
+  }
+  .service__item {
+    width: 100%;
+  }
+
+  .services > h2 {
+    font-size: 1.5rem;
+  }
+}
