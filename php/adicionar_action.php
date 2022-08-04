@@ -9,7 +9,7 @@ $message = filter_input(INPUT_POST, 'message');
 
 if( $name && $email && $tel && $message ){
 
-  $sql = $pdo->prepare('SELECT * FROM usuarios WHERE email = :email');
+  $sql = $pdo->prepare('SELECT * FROM users WHERE email = :email');
   $sql->bindValue(':email', $email);
   $sql->execute();
 
