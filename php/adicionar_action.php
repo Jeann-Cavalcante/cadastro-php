@@ -1,7 +1,7 @@
 <?php
 
-// require 'config.php';
-require 'configDeveloper.php';
+require 'config.php';
+// require 'configDeveloper.php';
 
 $name = filter_input(INPUT_POST, 'name');
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
@@ -23,7 +23,6 @@ if( $name && $email && $tel && $message ){
   $sql->bindValue(':message', $message);
   $sql->execute();
 
-  header('Location: ../sucess.html');
-  exit;
+  header('Location: ../list.php');
   }
 }

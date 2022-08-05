@@ -9,7 +9,7 @@ var telError = document.getElementById("errorTel");
 function validateForm() {
   var valid = true;
   if (firstName.value == "" || firstName.value.length <= 3) {
-    nameError.innerHTML = "*Nome invalido";
+    nameError.innerHTML = "*Nome inválido";
     valid = false;
   } else {
     nameError.innerHTML = "";
