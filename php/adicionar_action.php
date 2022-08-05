@@ -1,7 +1,7 @@
 <?php
 
-require 'config.php';
-// require 'configDeveloper.php';
+// require 'config.php';
+require 'configDeveloper.php';
 
 $name = filter_input(INPUT_POST, 'name');
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);

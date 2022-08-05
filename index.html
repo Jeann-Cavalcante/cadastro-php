@@ -14,11 +14,12 @@
     rel="stylesheet"
     />
     
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/services.css" />
     <link rel="stylesheet" href="./styles/questions.css" />
-    <link rel="stylesheet" href="./styles/finish.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
@@ -50,10 +51,11 @@
                 id="name"
                 class="form__input"
                 name="name"
+                required
                 placeholder=" "
               />
               <label for="name" class="form__label">Nome</label>
-              <span class="error">Campo obrigatorio</span>
+              <span id="errorName"></span>
             </div>
 
             <div class="form__content">
@@ -63,15 +65,16 @@
                 class="form__input"
                 placeholder=" "
                 name="email"
+                required
               />
               <label for="email" class="form__label">Email</label>
-              <span class="error"></span>
+              <span id="errorEmail"></span>
             </div>
 
             <div class="form__content">
-              <input type="number" id="tel" class="form__input" placeholder=" " name="tel" />
+              <input type="number" id="tel" required class="form__input" placeholder=" " name="tel" />
               <label for="tel" class="form__label">DDD + Telefone</label>
-              <span class="error"></span>
+              <span id="errorTel"></span>
             </div>
 
             <div class="form__content">
@@ -86,12 +89,13 @@
               >
             </div>
             <div class="form__content">
-              <button type="submit">Enviar</button>
+              <button type="submit" onclick=" return validateForm()">Enviar</button>
             </div>
           </form>
         </div>
       </div>
     </header>
+    
     <main>
       <section class="about">
         <div class="container__about">
@@ -235,7 +239,7 @@
       <section class="finish">
         <div class="container__finish">
           <div class="finish__text " data-aos="zoom-out">
-            <h2>faça uma chamada final</h2>
+            <h2>Faça uma chamada final</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aspernatur optio corporis quae quasi iusto eius est distinctio sint dolorem. Suscipit at corporis fuga aliquam saepe reiciendis, temporibus inventore illum!</p>
           </div>
 
@@ -256,6 +260,12 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
       </div>
     </footer>
+
+    <div class="contactWtt">
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=5511995985952&amp;text=Olá, A vaga de estágio é sua, parabéns hehe!">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+    </div>
     
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -272,6 +282,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="./scripts/clickScroll.js"></script>
+    <script src="./scripts/form.js"></script>
   </body>
   </body>
 </html>

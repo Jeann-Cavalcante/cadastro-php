@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color-primary: #002935;
+  --dark-blue-color-primary: #004b5b;
+  --blue-color-primary: #007a8b;
+  --light-blue-color-primary: #00b6c7;
+  --light-color-primary: #00ffff;
+  --white: #ffffff;
+  --gray: #e2e2e2;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%; // vai gerar 14px
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; //vai gerar 15px
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+  transition: all 0.9s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background-color: var(--gray);
+  opacity: 0.5;
+  transition: all 0.9s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-blue-color-primary);
+  transition: all 0.9s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-color-primary);
+}
+
+.contactWtt {
+  position: fixed;
+  top: 90%;
+  right: 1rem;
+  transition: 0.3s ease-out;
+  border-radius: 50%;
+  background-color: #3ce25a;
+  padding: 1rem;
+  text-align: center;
+  animation: animate-pulse 3s linear infinite;
+  cursor: pointer;
+}
+
+.contactWtt a {
+  z-index: 5;
+}
+
+.contactWtt ion-icon {
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+@keyframes animate-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #3ce25a, 0 0 0 0 #3ce25a;
+  }
+  40% {
+    box-shadow: 0 0 0 15px rgba(255, 109, 74, 0), 0 0 0 0 #3ce25a;
+  }
+  80% {
+    box-shadow: 0 0 0 15px rgba(255, 109, 74, 0),
+      0 0 0 30px rgba(255, 109, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 25px rgba(255, 109, 74, 0);
+  }
+}
