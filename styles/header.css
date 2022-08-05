@@ -68,9 +68,17 @@ header form {
   margin: 1rem;
 }
 
-header form h2 {
+header form div h2 {
   font-size: 1.5rem;
   color: var(--dark-color-primary);
+  text-align: center;
+}
+
+header form div h6 {
+  color: var(--dark-color-primary);
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 header form .form__content {
