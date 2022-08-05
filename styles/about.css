@@ -6,6 +6,7 @@
 .about .container__about {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,11 +50,10 @@
 
 @media (max-width: 520px) {
   .about .container__about img {
-    width: 100%;
+    width: 90%;
   }
 
   .about .container__about .about__text {
     width: 100%;
-    padding: 0 1rem;
   }
 }

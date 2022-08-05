@@ -15,9 +15,16 @@
   --gray: #e2e2e2;
 }
 
+body {
+  overflow-x: hidden;
+overflow-y: auto;
+}
+
 @media (max-width: 720px) {
   html {
     font-size: 87.5%; // vai gerar 14px
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 
@@ -207,21 +214,27 @@ header form button:hover {
     justify-content: center;
     margin-top: 1rem;
     height: 100%;
+    padding: 3rem 0;
     gap: 1rem;
   }
 
   header .container .header__content .header__content-text {
     align-text: center;
   }
+
+  header .container .header__content form {
+    margin-top: 2rem;
 }
 
 @media (max-width: 480px) {
   header .container .header__content {
     height: 100%;
     gap: 1rem;
+
   }
   header .container .header__content form {
     width: 90%;
     height: 100%;
+
   }
 }
