@@ -63,7 +63,7 @@ header form {
   padding: 1rem 1rem;
   border-radius: 0.5rem;
   background-color: #fff;
-  gap: 1.5rem;
+  gap: 1rem;
   height: 600px;
   margin: 1rem;
 }
@@ -157,7 +157,7 @@ header form button:hover {
   background-color: var(--dark-color-primary);
 }
 
-#errorName, #errorEmail, #errorTel {
+#errorName, #errorEmail, #errorTel, #errorMessage {
   color: red;
   font-size: 0.7rem;
 }
@@ -178,6 +178,7 @@ header form button:hover {
 
   header .container .header__content form {
     margin-top: 2rem;
+}
 }
 
 @media (max-width: 480px) {
